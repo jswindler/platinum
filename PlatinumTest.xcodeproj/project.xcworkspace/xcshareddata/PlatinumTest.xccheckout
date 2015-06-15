@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>998CB717-33B7-4C59-8FF6-F45DE1B8031D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PlatinumTest</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DEA6739DDF3F374C2F47A347B0C0C2120F86299C</key>
+		<string>https://github.com/joeswindler/platinum-test</string>
+		<key>ECD722190AC163C5C35A2F52A6F3B03E1447A405</key>
+		<string>https://github.com/jswindler/platinum</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PlatinumTest.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DEA6739DDF3F374C2F47A347B0C0C2120F86299C</key>
+		<string>../../../platinum-test</string>
+		<key>ECD722190AC163C5C35A2F52A6F3B03E1447A405</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jswindler/platinum</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ECD722190AC163C5C35A2F52A6F3B03E1447A405</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ECD722190AC163C5C35A2F52A6F3B03E1447A405</string>
+			<key>IDESourceControlWCCName</key>
+			<string>platinum</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DEA6739DDF3F374C2F47A347B0C0C2120F86299C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>platinum-test</string>
+		</dict>
+	</array>
+</dict>
+</plist>
