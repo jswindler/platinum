@@ -21,6 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.items = [NSMutableArray array];
     [self downloadProductData];
 }
 
@@ -54,5 +55,31 @@
         }
     }
 }
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.items.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell != nil) {
+        InstaItem *item = [self.items objectAtIndex:indexPath.row];
+        if (item != nil) {
+            cell.imageView.image = item.thumbnailImage;
+            cell.textLabel.text = item.username;
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"Likes: %@, Comments: %@",
+                                         [item.likes stringValue], [item.comments stringValue]];
+        }
+    }
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+// TODO...
 
 @end
