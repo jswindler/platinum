@@ -24,11 +24,6 @@
         NSString *url = [thumbnail objectForKey:@"url"];
         NSURL *imageUrl = [NSURL URLWithString:url];
         self.thumbnailImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]];
-        /*  thumbnail =         {
-            height = 150;
-            url = "https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s150x150/e15/11325693_415374078669184_1277615091_n.jpg";
-            jwidth = 150;
-         };*/
         
         NSDictionary *likes = [dict objectForKey:@"likes"];
         self.likes = [likes objectForKey:@"count"];
