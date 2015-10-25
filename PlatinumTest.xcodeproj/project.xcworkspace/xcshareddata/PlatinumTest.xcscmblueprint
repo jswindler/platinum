@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "ECD722190AC163C5C35A2F52A6F3B03E1447A405",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "ECD722190AC163C5C35A2F52A6F3B03E1447A405" : 0,
+    "DEA6739DDF3F374C2F47A347B0C0C2120F86299C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "998CB717-33B7-4C59-8FF6-F45DE1B8031D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "ECD722190AC163C5C35A2F52A6F3B03E1447A405" : "platinum",
+    "DEA6739DDF3F374C2F47A347B0C0C2120F86299C" : "platinum-test"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PlatinumTest",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PlatinumTest.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/joeswindler\/platinum-test",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DEA6739DDF3F374C2F47A347B0C0C2120F86299C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jswindler\/platinum",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ECD722190AC163C5C35A2F52A6F3B03E1447A405"
+    }
+  ]
+}

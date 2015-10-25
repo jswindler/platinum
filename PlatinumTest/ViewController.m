@@ -32,28 +32,41 @@
 
 - (void)downloadProductData
 {
-    // Create request
-    NSHTTPURLResponse *response = nil;
     NSString *jsonUrlString = [NSString stringWithFormat:@"https://api.instagram.com/v1/media/popular?client_id=f529e29bebcf499388ca00729e996a03"];
     NSURL *url = [NSURL URLWithString:[jsonUrlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
-    // Send request
-    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url];
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
-    
-    // Parse JSON response
-    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:nil];
-//    NSLog(@"Response: %@", result);
-    
-    NSDictionary *data = [result objectForKey:@"data"];
-    if (data != nil) {
-        for (NSDictionary *dict in data)
-        {
-            //NSLog(@"Item: %@", dict);
-            InstaItem *item = [[InstaItem alloc] initWithDictionary:dict];
-            [self.items addObject:item];
-        }
-    }
+  // show a visual loading indicator
+  [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+  
+  // Send request
+  [[[NSURLSession sharedSession] dataTaskWithURL:url
+                               completionHandler:^(NSData *data,
+                                                   NSURLResponse *response,
+                                                   NSError *error) {
+                                 //NSLog(@"Response: %@", response);
+                                 // Parse JSON response
+                                 if (error == nil) {
+                                   NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                                   
+                                   NSDictionary *data = [result objectForKey:@"data"];
+                                   if (data != nil) {
+                                     for (NSDictionary *dict in data)
+                                     {
+                                       //NSLog(@"Item: %@", dict);
+                                       InstaItem *item = [[InstaItem alloc] initWithDictionary:dict];
+                                       [self.items addObject:item];
+                                     }
+                                   }
+                                   
+                                   dispatch_async(dispatch_get_main_queue(), ^{
+                                     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                                     [self.tableView reloadData];
+                                   });
+                                 }
+                                 else {
+                                   //TODO: Handle error case
+                                 }
+                               }] resume];
 }
 
 #pragma mark - UITableViewDataSource
